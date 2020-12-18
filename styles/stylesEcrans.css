@@ -1,0 +1,626 @@
+html{
+	font-size:62.5%;
+}
+
+body{
+	margin: 0;
+	font-family: 'Barlow', sans-serif;
+	font-size: 1.4rem;
+	color: #000;
+	letter-spacing: 0.3px;
+	line-height: 1.4em;
+	background: #fff;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+a{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	color: #000;
+}
+
+/*------------ NIVEAUX DE LECTURE TRANSVERSAUX ------------*/
+
+h1{
+	margin:0;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: 0.3px;
+	line-height: 1.4em;
+}
+
+h2{
+	padding-bottom: 10px;
+	font-size: 1.8em;
+	line-height: 1.2em;
+	font-weight: 400;
+}
+
+p, h2{
+	margin: 0;
+	height: auto;
+	text-align: left;
+	width: 90%;
+	transition: all 0.4s;
+}
+
+.caps{
+	letter-spacing: 0.8px;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	line-height: 1.4em;
+	padding-bottom: 30px;
+}
+
+
+/*------------ HEADER ------------*/
+
+header{
+	position: fixed;
+	z-index:1;
+	width: 96%;
+	padding: 1% 2% 1% 2%;
+}
+
+.menu_un {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	text-align: left;
+}
+
+.menu_deux {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	text-align: left;
+}
+
+.menu_un li{
+	width: 49%;
+}
+
+.menu_deux li{
+	width: auto;
+	padding: 0%;
+}
+
+.menu a{
+	text-decoration: none;
+	color: #000;
+}
+
+.menu_bullet{
+	opacity:0;
+	transition: all 0.2s;
+}
+
+.menu a:hover .menu_bullet{
+	opacity:1;
+}
+
+
+/*------------ INTRO ------------*/
+
+.intro{
+	width: 47%;
+	padding: 25vh 2% 5% 51%;
+}
+
+.intro h2{
+	padding-bottom: 30px;
+}
+
+.intro_texte{
+	font-size: 1.8em;
+	line-height: 1.2em;
+	padding-bottom: 20px;
+}
+
+.intro a{
+	transition: all 0.2s;
+	color:#aaa;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+.intro a:hover{
+	color:#000;
+}
+
+.home_main .intro{
+	padding-top: 60px;
+	padding-bottom: 35vh;
+}
+
+.home_main .intro_texte{
+	font-size: 3em;
+}
+
+.index_main .intro{
+	padding-bottom: 0%;
+}
+
+.projet_main{
+	display: block;
+}
+
+.apropos_main .intro{
+	width: 96%;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+.apropos_main .intro div{
+	width: 49%;
+}
+
+.apropos_main .intro_texte{
+	position:fixed;
+	width: 44.1%;
+}
+
+
+/*------------ CONTENU HOME ------------*/
+
+.ligne{
+	width: 96%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 1.5% 2% 1.5% 2%; 
+}
+
+.image{
+	width: 49%;
+	overflow: hidden;
+	position: relative;
+}
+
+.texte{
+	width: 49%;
+}
+
+.image img, .image video{
+	display: block;
+	border: none;
+	width: 100%;
+	height: auto;
+	transition: all 0.4s;
+}
+
+.home_main .caps, .index_main .caps, .index_bas_page .caps{
+	padding-bottom: 7px;
+}
+
+.descriptif{
+	opacity:0;
+	padding-bottom: 10px;
+}
+
+.voir{
+	opacity:0;
+	padding-bottom: 20px;
+}
+
+.ligne:hover img, .ligne:hover video{
+	transform: scale(1.1);
+}
+
+.ligne:hover p.descriptif, .ligne:hover p.voir{
+	transform: translateY(10px);
+	opacity: 1;
+}
+
+.ligne:hover{
+	background: #f0efeb;
+}
+
+.home_galerie {
+	padding: 15% 0 15% 0;
+}
+
+.home_galerie img, .home_galerie video{
+	display: block;
+	border: none;
+	width: 100%;
+	height: auto;
+}
+
+.home_lien{
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-top: 10px;
+	text-align: center;
+}
+
+.home_lien a{
+	transition: all 0.2s;
+	color:#aaa;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+}
+
+.home_lien a:hover{
+	color:#000;
+}
+
+/*------------ CONTENU INDEX + INDEX BAS DE PAGE ------------*/
+
+
+.index_image{
+	width: 23.5%;
+	overflow: hidden;
+}
+
+.index_image img, .index_image video{
+	display: block;
+	border: none;
+	width: 100%;
+	height: auto;
+	transition: all 0.6s;
+}
+
+.index_main h2, .index_bas_page h2{
+	font-size: 1.3em;
+	letter-spacing: 0.3px;
+	line-height: 1.2em;
+}
+
+.index_titre{
+	width: 23.5%;
+}
+
+.index_description{
+	width: 49%;
+}
+
+
+/*------------ CONTENU PROJETS ------------*/
+
+
+.photos_une{
+	width: 96%;
+	padding: 1% 2% 1% 2%;
+}
+
+.photos_deux{
+	width: 96%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 1% 2% 1% 2%;
+}
+
+.photos_deux div{ 
+	width: 49%;
+}
+
+.photos_deux_droite{
+	width: 47%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 1% 2% 1% 51%;
+}
+
+.photos_trois{
+	width: 96%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 1% 2% 1% 2%;
+}
+
+.photos_trois div{
+	width: 32%;
+}
+
+.photos_trois div:only-child {
+  margin: 0 auto;
+}
+
+.photos img, .photos video{
+	display: block;
+	border: none;
+	width: 100%;
+	height: auto;
+}
+
+.photos{
+	padding-bottom: 100px;
+}
+
+.explication{
+	width: 47%;
+	font-size: 1.8em;
+	line-height: 1.2em;
+	padding: 5% 2% 5% 51%;
+}
+
+.explication p{
+	padding-bottom: 10px;
+}
+
+
+/*------------ CONTENU À PROPOS ------------*/
+
+
+.apropos_main h2{
+	font-size: 1.3em;
+	line-height: 1.2em;
+	padding-bottom: 20px;
+	padding-top: 10px;
+}
+
+.apropos_main .date{
+	letter-spacing: 0.8px;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	line-height: 1.4em;
+	padding-bottom: 2px;
+}
+
+.apropos_main h3{
+	letter-spacing: 0.8px;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	line-height: 1.4em;
+	font-weight: 400;
+	margin:0;
+}
+
+.apropos_main .caps{
+	padding-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:900px) {
+
+/*------------ INTRO ------------*/
+
+.intro{
+	width: 75%;
+	padding: 25vh 23% 5% 2%;
+}
+
+.apropos_main .intro{
+	width: 75%;
+	padding-left: 2%;
+	padding-right: 23%;
+	display: block;
+}
+
+.apropos_main .intro div{
+	width: 100%;
+	padding: 0;
+}
+
+.apropos_main .intro_texte {
+	padding-bottom: 8%;
+}
+
+.apropos_main .intro_texte{
+	position:relative;
+	width: auto;
+}
+
+
+/*------------ CONTENU HOME ------------*/
+
+.image{
+	min-height: 350px;
+}
+
+.image img{
+	height: 100%;
+	object-fit: cover;
+}
+
+.descriptif{
+	opacity:1;
+}
+
+.ligne:hover p.descriptif{
+	transform: none;
+}
+
+
+/*------------ CONTENU INDEX ------------*/
+
+.index_titre{
+	width: 49%;
+}
+
+.index_image{
+	min-height: 120px;
+}
+
+.index_image img{
+	height: 100%;
+	object-fit: cover;
+}
+
+.index_description{
+	width: 23.5%;
+}
+
+.index_descriptif{
+	display:none;
+}
+
+.index_description .voir{
+	opacity: 1;
+	color:#aaa;
+}
+
+.index_main .ligne:hover .voir, .index_bas_page .ligne:hover .voir{
+	color:#000;
+}
+
+.index_main .ligne:hover p.voir, .index_bas_page .ligne:hover p.voir{
+	transform: none;
+}
+
+
+/*------------ CONTENU PROJETS ------------*/
+
+.explication{
+	width: 75%;
+	padding: 5% 23% 5% 2%;
+}
+
+
+}
+
+
+
+
+
+@media only screen and (max-width:600px) {
+
+/*------------ HEADER ------------*/
+
+.menu_deux{
+	display: block;
+}
+
+.menu_deux li{
+	padding-bottom: 5px;
+}
+
+
+
+/*------------ INTRO ------------*/
+
+.intro{
+	width: 96%;
+	padding: 25vh 2% 5% 2%;
+}
+
+.home_main .intro{
+	width: 96%;
+	padding: 50vh 2% 5% 2%;
+}
+
+.apropos_main .intro{
+	width: 96%;
+	padding-right: 2%;
+}
+
+
+
+/*------------ CONTENU HOME ------------*/
+
+.home_main .ligne{
+	display: block;
+}
+
+.ligne{
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.descriptif{
+	display: none;
+}
+
+.voir{
+	display: none;
+}
+
+.image{
+	width: 100%;
+	min-height: auto;
+}
+
+.texte{
+	width: 100%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.home_galerie {
+	width: 60%;
+	padding: 20% 20% 20% 20%;
+}
+
+.home_galerie .photos_trois{
+	display: block;
+}
+
+.home_galerie .photos_trois div{
+	width: 100%;
+	padding: 2% 0 2% 0;
+}
+
+
+/*------------ CONTENU INDEX ------------*/
+
+.index_titre{
+	width: 73.5%;
+}
+
+
+/*------------ CONTENU PROJETS ------------*/
+
+.explication{
+	width: 96%;
+	padding: 5% 2% 5% 2%;
+}
+
+.photos_deux{
+	width: 96%;
+	display:block;
+	padding: 0% 2% 0% 2%;
+}
+
+.photos_deux div{
+	width: 100%;
+	padding: 1% 0 1% 0;
+}
+
+.photos_deux_droite{
+	width: 96%;
+	display:block;
+	padding: 1% 2% 1% 2%;
+}
+
+.photos_trois{
+	width: 96%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 0% 2% 0% 2%;
+}
+
+.photos_trois div{
+	width: 49%;
+	padding: 1% 0 1% 0;
+}
+
+.photos_trois div:only-child {
+  margin: 0;
+}
+
+
+}
