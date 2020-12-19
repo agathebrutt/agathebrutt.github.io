@@ -605,14 +605,12 @@ header{
 
 .photos_trois{
 	width: 96%;
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+	display: block;
 	padding: 0% 2% 0% 2%;
 }
 
 .photos_trois div{
-	width: 49%;
+	width: 100%;
 	padding: 1% 0 1% 0;
 }
 
