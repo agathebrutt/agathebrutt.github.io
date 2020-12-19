@@ -42,7 +42,7 @@ h2{
 	font-weight: 400;
 }
 
-p, h2{
+p, h2, h3{
 	margin: 0;
 	height: auto;
 	text-align: left;
@@ -379,7 +379,6 @@ header{
 	font-size: 0.8em;
 	line-height: 1.4em;
 	font-weight: 400;
-	margin:0;
 }
 
 .apropos_main .caps{
@@ -421,9 +420,8 @@ header{
 
 .apropos_main .intro_texte{
 	position:relative;
-	width: auto;
+	width: 90%;
 }
-
 
 /*------------ CONTENU HOME ------------*/
 
@@ -519,7 +517,7 @@ header{
 
 .home_main .intro{
 	width: 96%;
-	padding: 50vh 2% 5% 2%;
+	padding: 40vh 2% 5% 2%;
 }
 
 .apropos_main .intro{
