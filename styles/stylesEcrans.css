@@ -346,13 +346,24 @@ header{
 
 .explication{
 	width: 47%;
-	font-size: 1.8em;
-	line-height: 1.2em;
 	padding: 5% 2% 5% 51%;
 }
 
 .explication p{
+	font-size: 1.8em;
+	line-height: 1.2em;
 	padding-bottom: 10px;
+}
+
+.explication a{
+	transition: all 0.2s;
+	color:#aaa;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+.explication a:hover{
+	color:#000;
 }
 
 
