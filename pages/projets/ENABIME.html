@@ -12,6 +12,10 @@
 
 	<link rel="shortcut icon" type="image/png" href="../../images/agathe_brutt_favicon.png"/>
 
+
+
+
+
 </head>
 <body>
 
@@ -36,14 +40,14 @@
 
 	</header>
 
-
+<div><a id="cRetour" class="cInvisible" href="#haut"></a></div>
 
 
 	<main class="projet_main">
 
 		<div class="contenu">
 
-			<div class="intro">
+			<div class="intro" id="haut">
 
 				<h2>En abîme, application de vulgarisation scientifique par l'image</h2>
 				<p class="intro_texte">En abîme est une application invitant le lecteur à accéder à du contenu scientifique par un moyen alternatif : à travers la curiosité que suscite l'image de science.</p>
@@ -292,6 +296,14 @@
 			});
 
 		</script>
+
+		<script>
+document.addEventListener('DOMContentLoaded', function() {
+  window.onscroll = function(ev) {
+    document.getElementById("cRetour").className = (window.pageYOffset > 100) ? "cVisible" : "cInvisible";
+  };
+});
+</script>
 
 </body>
 </html>
