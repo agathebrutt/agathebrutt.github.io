@@ -113,7 +113,7 @@ a#cRetour{
   border-radius:50%;
   width: 25px;
   height: 25px;
-  padding:12px 10px 8px 10px;
+  padding:12.5px 10px 7.5px 10px;
   text-align:center;
   color:#fff;
   background:rgba(0, 0, 0, 0.25);
@@ -407,7 +407,7 @@ a#cRetour.cVisible{
 }
 
 
-/*------------ IFRAME ------------*/
+/*------------ IFRAME
 
 .video-conteneur {
 position:relative;
@@ -424,7 +424,7 @@ left:0;
 width:100%;
 height:100%;
 }
-
+ ------------*/
 
 /*------------ CONTENU À PROPOS ------------*/
 
