@@ -28,6 +28,10 @@ a{
 
 /*------------ CARROUSEL ------------*/
 
+.carousel{
+	width: 98%;
+	padding: 1% 0 1% 2%;
+}
 
 .carousel-items {
     display: flex;
@@ -40,7 +44,8 @@ a{
 .carousel-item {
     flex-grow: 1;
     flex-shrink: 0;
-    flex-basis: 60rem;
+    flex-basis: 62rem;
+    padding-right:2%;
 }
 
 
@@ -450,7 +455,6 @@ a#cRetour.cVisible{
 	height:100%;
 }
 	
-}
 
 
 /*------------ CONTENU À PROPOS ------------*/
