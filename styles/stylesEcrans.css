@@ -26,29 +26,6 @@ a{
 }
 
 
-/*------------ CARROUSEL ------------*/
-
-.carousel{
-	width: 98%;
-	padding: 1% 0 1% 2%;
-}
-
-.carousel-items {
-    display: flex;
-    overflow-x: scroll;
-    width: 100%;
-    height: auto;
-    padding-bottom: 10px;
-}
-
-.carousel-item {
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 62rem;
-    padding-right:2%;
-}
-
-
 /*------------ NIVEAUX DE LECTURE TRANSVERSAUX ------------*/
 
 h1{

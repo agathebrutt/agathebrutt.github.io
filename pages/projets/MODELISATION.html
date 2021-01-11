@@ -68,64 +68,50 @@
 					</div>
 				</div>
 
-				
-						<section class="carousel">
-				            <ul class="carousel-items">
-				                <li class="carousel-item">
-				                    <div class="card">
-				                        <img src="../../images/agathe_brutt_modelisation_06.jpg" alt="Mondes ouverts et modélisation de systèmes complexes — création d'un nouvel item">
-				                    </div>
-				                </li>
-				                <li class="carousel-item">
-				                    <div class="card">
-				                        <img src="../../images/agathe_brutt_modelisation_05.jpg" alt="Mondes ouverts et modélisation de systèmes complexes — profil de l'item Lapin avant définition des enfants">
-				                    </div>
-				                </li>
-				            	<li class="carousel-item">
-				                    <div class="card">
-				                        <img src="../../images/agathe_brutt_modelisation_04.jpg" alt="Mondes ouverts et modélisation de systèmes complexes — profil de l'item Lapin après définition des enfants">
-				                    </div>
-				                </li>
-				                <li class="carousel-item">
-				                    <div class="card">
-				                        <img src="../../images/agathe_brutt_modelisation_03.jpg" alt="Mondes ouverts et modélisation de systèmes complexes — sélection d'un item">
-				                    </div>
-				                </li>
-				                <li class="carousel-item">
-				                    <div class="card">
-				                        <img src="../../images/agathe_brutt_modelisation_07.jpg" alt="Mondes ouverts et modélisation de systèmes complexes — monde complet, par groupe et sans pondération des items">
-				                    </div>
-				                </li>
-				                <li class="carousel-item">
-				                    <div class="card">
-				                        <img src="../../images/agathe_brutt_modelisation_08.jpg" alt="Mondes ouverts et modélisation de systèmes complexes — monde complet, par grand axe et sans pondération des items">
-				                    </div>
-				                </li>
-				            	<li class="carousel-item">
-				                    <div class="card">
-				                        <img src="../../images/agathe_brutt_modelisation_11.jpg" alt="Mondes ouverts et modélisation de systèmes complexes — monde complet, par groupe et pondéré par connexions">
-				                    </div>
-				                </li>
-				                <li class="carousel-item">
-				                    <div class="card">
-				                        <img src="../../images/agathe_brutt_modelisation_12.jpg" alt="Mondes ouverts et modélisation de systèmes complexes — monde complet, par grand axe et et pondéré par connexions">
-				                    </div>
-				                </li>
-				                <li class="carousel-item">
-				                    <div class="card">
-				                        <img src="../../images/agathe_brutt_modelisation_09.jpg" alt="Mondes ouverts et modélisation de systèmes complexes — monde complet, par groupe et pondéré par population">
-				                    </div>
-				                </li>
-				                <li class="carousel-item">
-				                    <div class="card">
-				                        <img src="../../images/agathe_brutt_modelisation_10.jpg" alt="Mondes ouverts et modélisation de systèmes complexes — monde complet, par grand axe et et pondéré par population">
-				                    </div>
-				                </li>
-				            </ul>
-						</section>
-				
+				<div class="photos_deux">
+					<div>
+						<img src="../../images/agathe_brutt_modelisation_06.jpg" alt="Mondes ouverts et modélisation de systèmes complexes — création d'un nouvel item">
+					</div>
+					<div>
+						<img src="../../images/agathe_brutt_modelisation_05.jpg" alt="Mondes ouverts et modélisation de systèmes complexes — profil de l'item Lapin avant définition des enfants">
+					</div>
+				</div>
 
+				<div class="photos_deux">
+					<div>
+						<img src="../../images/agathe_brutt_modelisation_04.jpg" alt="Mondes ouverts et modélisation de systèmes complexes — profil de l'item Lapin après définition des enfants">
+					</div>
+					<div>
+						<img src="../../images/agathe_brutt_modelisation_03.jpg" alt="Mondes ouverts et modélisation de systèmes complexes — sélection d'un item">
+					</div>
+				</div>
 
+				<div class="photos_deux">
+					<div>
+						<img src="../../images/agathe_brutt_modelisation_07.jpg" alt="Mondes ouverts et modélisation de systèmes complexes — monde complet, par groupe et sans pondération des items">
+					</div>
+					<div>
+						<img src="../../images/agathe_brutt_modelisation_08.jpg" alt="Mondes ouverts et modélisation de systèmes complexes — monde complet, par grand axe et sans pondération des items">
+					</div>
+				</div>
+
+				<div class="photos_deux">
+					<div>
+						<img src="../../images/agathe_brutt_modelisation_11.jpg" alt="Mondes ouverts et modélisation de systèmes complexes — monde complet, par groupe et pondéré par connexions">
+					</div>
+					<div>
+						<img src="../../images/agathe_brutt_modelisation_12.jpg" alt="Mondes ouverts et modélisation de systèmes complexes — monde complet, par grand axe et et pondéré par connexions">
+					</div>
+				</div>
+
+				<div class="photos_deux">
+					<div>
+						<img src="../../images/agathe_brutt_modelisation_09.jpg" alt="Mondes ouverts et modélisation de systèmes complexes — monde complet, par groupe et pondéré par population">
+					</div>
+					<div>
+						<img src="../../images/agathe_brutt_modelisation_10.jpg" alt="Mondes ouverts et modélisation de systèmes complexes — monde complet, par grand axe et et pondéré par population">
+					</div>
+				</div>
 
 
 				<div  id="ancre" class="explication">
@@ -299,6 +285,57 @@
   			};
 			});
 		</script>
+
+
+<script>
+		jQuery(document).ready(function ($) {
+
+  $('#checkbox').change(function(){
+    setInterval(function () {
+        moveRight();
+    }, 3000);
+  });
+  
+	var slideCount = $('#slider ul li').length;
+	var slideWidth = $('#slider ul li').width();
+	var slideHeight = $('#slider ul li').height();
+	var sliderUlWidth = slideCount * slideWidth;
+	
+	$('#slider').css({ width: slideWidth, height: slideHeight });
+	
+	$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+	
+    $('#slider ul li:last-child').prependTo('#slider ul');
+
+    function moveLeft() {
+        $('#slider ul').animate({
+            left: + slideWidth
+        }, 200, function () {
+            $('#slider ul li:last-child').prependTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    function moveRight() {
+        $('#slider ul').animate({
+            left: - slideWidth
+        }, 200, function () {
+            $('#slider ul li:first-child').appendTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    $('a.control_prev').click(function () {
+        moveLeft();
+    });
+
+    $('a.control_next').click(function () {
+        moveRight();
+    });
+
+});    
+</script>
+
 
 </body>
 </html>
