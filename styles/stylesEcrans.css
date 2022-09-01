@@ -16,7 +16,7 @@ html{
 
 body{
 	margin: 0;
-	font-family: 'Silka', sans-serif;
+	font-family: "Silka", sans-serif;
 	font-size: 1.4rem;
 	color: var(--couleurTextes);
 	letter-spacing: 0.3px;
