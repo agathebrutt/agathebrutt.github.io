@@ -6,8 +6,8 @@
 }
 
 @font-face {
-	font-family: 'Archia';
-	src: url(../polices/archia-medium-webfont.woff2) format('woff2');
+	font-family: "Archia";
+	src: url("../polices/archia-medium-webfont.woff2") format("woff2");
 }
 
 html{
