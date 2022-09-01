@@ -1,5 +1,5 @@
 :root{
-	--noir: #000;
+	--noir: rgb(255, 0, 0);
 	--gris: #f0efeb;
 	--blanc: #fff;
 }
