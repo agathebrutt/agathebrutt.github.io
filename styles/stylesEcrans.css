@@ -1,7 +1,13 @@
 :root{
-	--noir: rgb(255, 0, 0);
-	--gris: #f0efeb;
+	--couleurTextes: rgb(0, 0, 0);
+	--couleurFondHover: #f0efeb;
+	--couleurLiens: #aaa;
 	--blanc: #fff;
+}
+
+@font-face {
+	font-family: Archia;
+	src: url(../polices/archia-medium-webfont.woff2) format('woff2');
 }
 
 html{
@@ -10,9 +16,9 @@ html{
 
 body{
 	margin: 0;
-	font-family: 'Barlow', sans-serif;
+	font-family: 'Archia', sans-serif;
 	font-size: 1.4rem;
-	color: var(--noir);
+	color: var(--couleurTextes);
 	letter-spacing: 0.3px;
 	line-height: 1.4em;
 	background: var(--blanc);
@@ -28,7 +34,7 @@ a{
 	margin: 0;
 	padding: 0;
 	text-decoration: none;
-	color: var(--noir);
+	color: var(--couleurTextes);
 }
 
 
@@ -100,7 +106,7 @@ header{
 
 .menu a{
 	text-decoration: none;
-	color: var(--noir);
+	color: var(--couleurTextes);
 }
 
 .menu_bullet{
@@ -171,13 +177,13 @@ a#cRetour.cVisible{
 
 .intro a{
 	transition: all 0.2s;
-	color:#aaa;
+	color: var(--couleurLiens);
 	padding-top:10px;
 	padding-bottom:10px;
 }
 
 .intro a:hover{
-	color:var(--noir);
+	color:var(--couleurTextes);
 }
 
 .home_main .intro{
@@ -268,7 +274,7 @@ a#cRetour.cVisible{
 }
 
 .ligne:hover{
-	background: var(--gris);
+	background: var(--couleurFondHover);
 }
 
 .home_galerie {
@@ -291,7 +297,7 @@ a#cRetour.cVisible{
 
 .home_lien a{
 	transition: all 0.2s;
-	color:#aaa;
+	color: var(--couleurLiens);
 	padding-left: 2%;
 	padding-right: 2%;
 	padding-top: 10px;
@@ -300,7 +306,7 @@ a#cRetour.cVisible{
 }
 
 .home_lien a:hover{
-	color:var(--noir);
+	color:var(--couleurTextes);
 }
 
 /*------------ CONTENU INDEX + INDEX BAS DE PAGE ------------*/
@@ -402,13 +408,13 @@ a#cRetour.cVisible{
 
 .explication a{
 	transition: all 0.2s;
-	color:#aaa;
+	color: var(--couleurLiens);
 	padding-top:10px;
 	padding-bottom:10px;
 }
 
 .explication a:hover{
-	color: var(--noir);
+	color: var(--couleurTextes);
 }
 
 
@@ -560,11 +566,11 @@ a#cRetour.cVisible{
 
 .index_description .voir{
 	opacity: 1;
-	color:#aaa;
+	color: var(--couleurLiens);
 }
 
 .index_main .ligne:hover .voir, .index_bas_page .ligne:hover .voir{
-	color: var(--noir);
+	color: var(--couleurTextes);
 }
 
 .index_main .ligne:hover p.voir, .index_bas_page .ligne:hover p.voir{
