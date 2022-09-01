@@ -6,8 +6,8 @@
 }
 
 @font-face {
-	font-family: "Archia";
-	src: url("../polices/archia-medium-webfont.woff2") format("woff2");
+	font-family: "Silka";
+	src: url("../polices/silka-regular-webfont.woff2") format("woff2");
 }
 
 html{
@@ -16,7 +16,7 @@ html{
 
 body{
 	margin: 0;
-	font-family: 'Archia', sans-serif;
+	font-family: 'Silka', sans-serif;
 	font-size: 1.4rem;
 	color: var(--couleurTextes);
 	letter-spacing: 0.3px;
