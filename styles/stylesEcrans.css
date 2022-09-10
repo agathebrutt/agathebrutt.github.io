@@ -12,11 +12,11 @@ html{
 body{
 	margin: 0;
 	font-family: "neue-haas-unica", sans-serif;
-	font-weight: 300;
 	font-size: 1.4rem;
-	color: var(--couleurTextes);
+	font-weight: 300;
 	letter-spacing: 0.3px;
-	line-height: 1.5em;
+	line-height: 1.25em;
+	color: var(--couleurTextes);
 	background: var(--blanc);
 }
 
@@ -37,19 +37,16 @@ a{
 /*------------ NIVEAUX DE LECTURE TRANSVERSAUX ------------*/
 
 h1{
-	margin:0;
-	
-	font-size: 14px;
-	letter-spacing: 0.3px;
-	line-height: 1.4em;
-	font-weight: 300;;
+	margin: 0;
+	font-size: 1.4rem;
+	font-weight: 300;
+	line-height: 1.25em;
 }
 
 h2{
-	padding-bottom: 10px;
-	font-size: 1.8em;
-	line-height: 1.2em;
+	font-size: 2.5rem;
 	font-weight: 300;
+	padding-bottom: 10px;
 }
 
 p, h2, h3{
@@ -59,13 +56,14 @@ p, h2, h3{
 	width: 90%;
 	transition: all 0.4s;
 	line-height: 1.25em;
+	letter-spacing: 0.3px;
 }
 
 .caps{
-	letter-spacing: 0.8px;
 	text-transform: uppercase;
-	font-size: 0.8em;
+	font-size: 1.2rem;
 	line-height: 1.6em;
+	letter-spacing: 0.8px;
 	padding-bottom: 30px;
 }
 
@@ -168,7 +166,7 @@ a#cRetour.cVisible{
 }
 
 .intro_texte{
-	font-size: 1.8em;
+	font-size: 2.5rem;
 	padding-bottom: 20px;
 }
 
@@ -177,7 +175,6 @@ a#cRetour.cVisible{
 	color: var(--couleurLiens);
 	padding-top:10px;
 	padding-bottom:10px;
-	
 }
 
 .intro a:hover{
@@ -190,7 +187,7 @@ a#cRetour.cVisible{
 }
 
 .home_main .intro_texte{
-	font-size: 3em;
+	font-size: 4.2rem;
 }
 
 .index_main .intro{
@@ -324,7 +321,7 @@ a#cRetour.cVisible{
 }
 
 .index_main h2, .index_bas_page h2{
-	font-size: 1.4em;
+	font-size: 1.8rem;
 }
 
 .index_titre{
@@ -397,7 +394,7 @@ a#cRetour.cVisible{
 }
 
 .explication p{
-	font-size: 1.8em;
+	font-size: 2.5rem;
 	padding-bottom: 10px;
 }
 
@@ -447,8 +444,7 @@ a#cRetour.cVisible{
 
 
 .apropos_main h2{
-	font-size: 1.3em;
-	line-height: 1.25em;
+	font-size: 1.8rem;
 	padding-bottom: 12px;
 	padding-top: 20px;
 }
@@ -458,18 +454,18 @@ a#cRetour.cVisible{
 }
 
 .apropos_main .date{
-	letter-spacing: 0.8px;
 	text-transform: uppercase;
-	font-size: 0.8em;
+	font-size: 1.2rem;
 	line-height: 1.6em;
+	letter-spacing: 0.8px;
 	padding-bottom: 3px;
 }
 
 .apropos_main h3{
-	letter-spacing: 0.8px;
 	text-transform: uppercase;
-	font-size: 0.8em;
+	font-size: 1.2rem;
 	line-height: 1.6em;
+	letter-spacing: 0.8px;
 	font-weight: 300;
 }
 
@@ -479,9 +475,8 @@ a#cRetour.cVisible{
 
 .mentionslegales{
 	padding-top: 45px;
-	font-size: 0.8em;
+	font-size: 1.2rem;
 	line-height: 1.4em;
-	letter-spacing: 0.3px;
 }
 
 
