@@ -216,7 +216,7 @@ a#cRetour.cVisible{
 
 .apropos_main .intro_texte{
 	position:fixed;
-	width: 44.1%;
+	width: 40%;
 }
 
 
@@ -448,17 +448,21 @@ a#cRetour.cVisible{
 
 .apropos_main h2{
 	font-size: 1.3em;
-	line-height: 1.2em;
-	padding-bottom: 20px;
-	padding-top: 10px;
+	line-height: 1.25em;
+	padding-bottom: 12px;
+	padding-top: 20px;
+}
+
+#contact{
+	padding-top: 6.5px;
 }
 
 .apropos_main .date{
 	letter-spacing: 0.8px;
 	text-transform: uppercase;
 	font-size: 0.8em;
-	line-height: 1.4em;
-	padding-bottom: 2px;
+	line-height: 1.6em;
+	padding-bottom: 3px;
 }
 
 .apropos_main h3{
@@ -470,7 +474,7 @@ a#cRetour.cVisible{
 }
 
 .apropos_main .caps{
-	padding-bottom: 20px;
+	padding-bottom: 12px;
 }
 
 .mentionslegales{
