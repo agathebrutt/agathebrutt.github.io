@@ -76,6 +76,7 @@ header{
 	z-index:1;
 	width: 96%;
 	padding: 1% 2% 1% 2%;
+	background: var(--blanc);
 }
 
 .menu_un {
@@ -598,6 +599,10 @@ a#cRetour.cVisible{
 
 /*------------ HEADER ------------*/
 
+header{
+	background:none;
+}
+
 .menu_deux{
 	display: block;
 }
@@ -727,6 +732,5 @@ a#cRetour.cVisible{
 .photos_trois div:only-child {
   margin: 0;
 }
-
 
 }
