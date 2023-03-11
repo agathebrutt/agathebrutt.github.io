@@ -227,17 +227,17 @@ a#cRetour.cVisible{
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	padding: 1.5% 2% 1.5% 2%; 
+	padding: 2% 2% 2% 2%; 
 }
 
 .image{
 	width: 49%;
 	overflow: hidden;
-	position: relative;
 }
 
 .texte{
 	width: 32%;
+	position:relative;
 }
 
 .image img, .image video{
@@ -260,8 +260,57 @@ a#cRetour.cVisible{
 .voir{
 	opacity:0;
 	padding-bottom: 20px;
-	
 }
+
+
+/*.cercle {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background: black;
+	position:absolute;
+	right:0;
+	bottom:0;
+	opacity:0;
+	transition: all 0.4s;
+}
+
+.ligne:hover .cercle{
+	opacity: 1;
+}
+
+{
+  display: block;
+  margin: 60px auto;
+  width: 50px;
+  height: 50px;
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+  position:absolute;
+  bottom:-25px;
+  right:25px;
+  opacity:0;
+  transition: all 0.4s;
+}
+.long-arrow-right{
+ transform: rotate(135deg);
+}
+.long-arrow-right::after{
+  content: "";
+  display: block;
+  width: 2px;
+  height: 90px;
+  background-color: black;
+  transform: rotate(-45deg) translate(31px, 12px);
+  left: 0;
+  top: 0;
+}
+.ligne:hover .long-arrow-right{
+	opacity: 1;
+}*/
+
+
+
 
 .ligne:hover img, .ligne:hover video{
 	transform: scale(1.1);
@@ -324,7 +373,7 @@ a#cRetour.cVisible{
 }
 
 .index_main h2, .index_bas_page h2{
-	font-size: 1.8rem;
+	font-size: 2.2rem;
 }
 
 .index_titre{
@@ -447,7 +496,7 @@ a#cRetour.cVisible{
 
 
 .apropos_main h2{
-	font-size: 1.8rem;
+	font-size: 2.2rem;
 	padding-bottom: 12px;
 	padding-top: 20px;
 }
@@ -486,6 +535,11 @@ a#cRetour.cVisible{
 
 
 
+@media only screen and (max-width:1200px) {
+	.ligne h2{
+		font-size:1.8rem;
+	}
+}
 
 
 
@@ -570,6 +624,8 @@ a#cRetour.cVisible{
 .index_description .voir{
 	opacity: 1;
 	color: var(--couleurLiens);
+	text-align: right;
+	width: 100%;
 }
 
 .index_main .ligne:hover .voir, .index_bas_page .ligne:hover .voir{
@@ -645,6 +701,10 @@ header{
 	padding-bottom: 2%;
 }
 
+.ligne .caps{
+	font-size: 1rem;
+}
+
 .descriptif{
 	display: none;
 }
@@ -677,6 +737,7 @@ header{
 	width: 100%;
 	padding: 2% 0 2% 0;
 }
+
 
 
 /*------------ CONTENU INDEX ------------*/
