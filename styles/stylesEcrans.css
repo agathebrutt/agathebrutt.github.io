@@ -9,6 +9,7 @@ html{
 	font-size:62.5%;
 }
 
+
 body{
 	margin: 0;
 	font-family: "neue-haas-unica", sans-serif;
@@ -235,7 +236,7 @@ a#cRetour.cVisible{
 }
 
 .texte{
-	width: 49%;
+	width: 32%;
 }
 
 .image img, .image video{
@@ -527,6 +528,10 @@ a#cRetour.cVisible{
 .image img{
 	height: 100%;
 	object-fit: cover;
+}
+
+.texte{
+	width: 49%;
 }
 
 .descriptif{
