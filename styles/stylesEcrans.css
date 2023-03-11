@@ -696,11 +696,6 @@ header{
 	display: block;
 }
 
-.ligne{
-	padding-top: 2%;
-	padding-bottom: 2%;
-}
-
 .ligne .caps{
 	font-size: 1rem;
 }
