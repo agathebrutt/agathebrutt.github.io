@@ -63,8 +63,14 @@ h3, button{
 
 p, h3, button{
 	margin: 0;
+	padding:0;
 	height: auto;
 	text-align: left;
+}
+
+button{
+	background:none;
+	border:none;
 	font: inherit;
 }
 
@@ -80,11 +86,10 @@ p, h3, button{
 
 /*------------ HEADER ------------*/
 
-
 header{
 	position: fixed;
 	z-index:1;
-	top:8px;
+	top:9px;
 	left:8px;
 }
 
@@ -92,6 +97,7 @@ header{
 	display: flex;
 	flex-direction: row;
 	justify-content: start;
+	flex-wrap: wrap;
 	gap:8px;
 }
 
@@ -109,6 +115,7 @@ header{
 	color: var(--darkGray);
 }
 
+
 /*------------ HOMEPAGE ------------*/
 
 .home_project{
@@ -116,7 +123,7 @@ header{
 	height:95vh;
 	display: flex;
 	flex-direction: row;
-	justify-content: start;
+	justify-content: space-between;
 	overflow:hidden;
 }
 
@@ -125,6 +132,8 @@ header{
 	height:100%;
 	position:relative;
 }
+
+/*----- slideshow -----*/
 
 .home_article figure {
     width:100%;   
@@ -151,11 +160,59 @@ header{
 	height: 100%; 
 }
 
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	height:100%;
+	width: 50%;
+	font-size: 2.5rem;
+	padding: 16px;
+	opacity:0;
+	transition:all ease-in 0.1s;
+	user-select: none;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+}
+
+.next {
+	right: 0;
+	justify-content: flex-end;
+}
+
+.prev:hover, .next:hover {
+	opacity:1;
+}
+
+/* Captions */
+.slider__captions {
+	position: absolute;
+	bottom: 9px;
+	right: 8px;
+	font-variant-numeric: tabular-nums;
+	display:flex;
+	flex-direction:row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	gap:8px;
+}
+
+.home_article figcaption, .home_article .slider__count{
+	font-size: 0.8rem;
+	padding:6px 10px;
+	font-variant-numeric: tabular-nums;
+}
+
+
+/*----- text article -----*/
+
 .with_caption{
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
-	padding: 5% 3%;
+	padding: 4% 3%;
 }
 
 .with_caption_content{
@@ -163,6 +220,41 @@ header{
 	height:100%;
 	max-width:420px;
 	overflow:scroll;
+	position:relative;
+}
+
+.project_head {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: end;
+	gap:16px;
+	margin-left:35%;
+	margin-bottom:12px;
+	border-bottom:.7px solid;
+	border-color: rgba(241, 241, 241, .5) ;
+}
+
+.with_caption h2{
+	padding: 16px 0 10px 0;
+}
+
+.more{
+	height:100%;
+	padding:12px 16px 13px 16px;
+	cursor: pointer;
+	white-space: nowrap;
+	color: var(--blanc);
+	border-top:.7px solid;
+	border-right:.7px solid;
+	border-left:.7px solid;
+	border-color: rgba(241, 241, 241, .5) ;
+}
+
+.more:hover{
+	transition:all ease-in 0.1s;
+	background-color: var(--blanc);
+	color:var(--darkGray);
 }
 
 .project_description{
@@ -182,85 +274,26 @@ header{
 	position: relative;
 }
 
-.with_caption h2{
-	padding-left: 35%;
-	padding-bottom:10px;
-}
-
 .with_caption p{
 	padding-bottom:10px;
 }
 
-.caption-en{
-	opacity:.7;
-	font-style: italic;
-}
-
-.more{
-	background:none;
-	border:none;
+.end_symbol{
+	display: inline-block;
 	white-space: nowrap;
-	padding:0;
-	color: var(--blanc);
-	padding:10px 15px 11px 15px;
-	border: .7px solid var(--blanc);
-	margin-top:8px;
+	padding-top:9px;
 }
 
-.more:hover{
-	background-color: var(--blanc);
-	transition:all ease-in 0.1s;
-	color: var(--darkGray);
-}
 
-.text_black, .text_black button{
+/*----- text color -----*/
+
+.text_black, .text_black button {
 	color:var(--darkGray);
 }
 
-.text_black .more{
-	border: .7px solid var(--darkGray);
+.text_black .project_head, .text_black .more {
+	border-color: rgba(24, 24, 24, .5) ;
 }
-
-
-/*------------ SLIDESHOW ------------*/
-
-/* Next & previous buttons */
-.prev, .next {
-	cursor: pointer;
-	position: absolute;
-	top: 0;
-	height:100%;
-	width: 50%;
-	font-size: 1.8rem;
-	padding: 16px;
-	opacity:0;
-	transition:all ease-in 0.1s;
-	user-select: none;
-	display:flex;
-	flex-direction:row;
-	align-items:center;
-}
-
-.next {
-	right: 0;
-	justify-content: flex-end;
-}
-
-.prev:hover, .next:hover {
-	opacity:1;
-	color:var(--darkGray);
-}
-
-/* Caption */
-.slideshow_caption {
-	padding-bottom:4vw;
-	position: absolute;
-	bottom: 0;
-	left: 53vw;
-	font-variant-numeric: tabular-nums;
-	white-space: nowrap;
-}
-
 
 
 
@@ -272,9 +305,7 @@ header{
 }
 
 .about_content h2 {
-	font-weight:700;
 	font-size: 0.9rem;
-	line-height: 1.3em;
 }
 
 .about_content article{
