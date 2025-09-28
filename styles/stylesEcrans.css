@@ -126,8 +126,8 @@ header{
 
 .home_project{
 	width:100%;
-	max-height:95vh;
-	max-height:95dvh;
+	max-height:94vh;
+	max-height:94dvh;
 	min-height:75vh;
 	min-height:75dvh;
 	display: flex;
@@ -229,7 +229,7 @@ header{
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
-	padding: 3.5%;
+	padding: 4.5% 3.5%;
 }
 
 .with_caption_content{
@@ -245,7 +245,7 @@ header{
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: end;
-	gap:16px;
+	gap:24px;
 	margin-left:35%;
 	margin-bottom:12px;
 	border-bottom:.7px solid;
@@ -253,7 +253,7 @@ header{
 }
 
 .with_caption h2{
-	padding: 16px 0 10px 0;
+	padding-bottom: 12px;
 }
 
 .more{
@@ -355,8 +355,8 @@ header{
 @media only screen and (max-width:1280px) {
 
 	p, a, button, h1, ul, .about_content h2 {
-		font-size:0.77rem;
-		line-height:1.05rem;
+		font-size:0.82rem;
+		line-height:1.1rem;
 	}
 
 	.home_article figcaption, .home_article .slider__count{
@@ -365,11 +365,11 @@ header{
 	}
 
 	.slideshow_container{
-		width:65%;
+		width:60%;
 	}
 
 	.with_caption{
-		width:35%;
+		width:40%;
 		padding: 3% 3% 3% 8%;
 	}
 
@@ -411,13 +411,18 @@ header{
 		position:static;
 	}
 
+	.slideshow_container{
+		width:62%;
+	}
+
 	.slider__captions {
 		top: auto;
 		bottom:16px;
 	}
 
 	.with_caption{
-		padding: 3%;
+		width:38%;
+		padding: 3% 3% 3% 6%;
 	}
 
 	.about_content article > * {
@@ -462,11 +467,11 @@ header{
 	.prev, .next{
 		opacity:1;
 		font-size:2rem;
-		padding: 8px;
+		padding: 10px;
 	}
 
 	.with_caption{
-		padding: 24px 20px 32px 20px;
+		padding: 24px 18px 32px 18px;
 		min-height:50vh;
 		min-height:50dvh;
 	}
@@ -500,7 +505,6 @@ header{
 	}
 
 }
-
 
 
 @media only screen and (max-width:640px) {
