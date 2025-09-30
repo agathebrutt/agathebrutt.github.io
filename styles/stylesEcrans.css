@@ -121,6 +121,10 @@ header{
 	color: var(--black);
 }
 
+.black_background a{
+	background-color: var(--black);
+}
+
 
 /*------------ HOMEPAGE ------------*/
 
@@ -210,7 +214,7 @@ header{
 .slider__captions {
 	position: absolute;
 	top: 20px;
-	right: 18px;
+	right: 24px;
 	display:flex;
 	flex-direction:row;
 	justify-content: flex-end;
@@ -218,9 +222,9 @@ header{
 	gap:16px;
 }
 
-.home_article figcaption, .home_article .slider__count{
+/*.home_article figcaption, .home_article .slider__count{
 	font-size: 0.8rem;
-}
+}*/
 
 .home_article .slider__count{
 	font-variant-numeric: tabular-nums;
@@ -233,7 +237,7 @@ header{
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
-	padding: 4.5% 3.5%;
+	padding: 3.5%;
 }
 
 .with_caption_content{
@@ -408,17 +412,23 @@ header{
 
 /*------------ RESPONSIVE ------------*/
 
-@media only screen and (max-width:1280px){
-
-	p, a, button, h1, ul, .about_content h2 {
+@media only screen and (max-width:1440px){
+	p, a, button, h1, ul, .about_content h2, .slider__captions {
 		font-size:0.82rem;
 		line-height:1.35em;
 	}
 
-	.home_article figcaption, .home_article .slider__count{
+	h2{
+		font-size: 1.15rem;
+	}
+
+	/*.home_article figcaption, .home_article .slider__count{
 		font-size: 0.7rem;
 		line-height:1.3em;
-	}
+	}*/
+}
+
+@media only screen and (max-width:1280px){
 
 	.slideshow_container{
 		width:65%;
@@ -483,12 +493,16 @@ header{
 
 	.slider__captions {
 		top: auto;
-		bottom:16px;
+		bottom:20px;
 	}
 }	
 
 
 @media only screen and (max-width:820px){
+
+	.menu a{
+		background-color: var(--black);
+	}
 
 	.home_project{
 		max-height:none;
@@ -513,7 +527,7 @@ header{
 	.with_caption_content{
 		max-width:none;
 		width:100%;
-		min-height:450px;
+		min-height:430px;
 		border-bottom:.7px solid;
 		border-top:.7px solid;
 		border-color: rgba(241, 241, 241, .5);
