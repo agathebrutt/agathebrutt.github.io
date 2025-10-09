@@ -200,6 +200,7 @@ header{
 	display:flex;
 	flex-direction:row;
 	align-items:center;
+	color:var(--white);
 }
 
 .next {
@@ -328,6 +329,7 @@ header{
 
 /*----- big image -----*/
 
+
 .horizontal_image {
 	width:100%;
 	height:auto;
@@ -336,7 +338,7 @@ header{
 	background-color: var(--black);
    	display: flex;
 	flex-direction: column;
-    align-items: stretch;
+	justify-content: space-between;
 	gap:24px;
 }
 
