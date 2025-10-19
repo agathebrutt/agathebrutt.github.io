@@ -7,7 +7,6 @@
 :root{
 	--white: #F1F1F1;
 	--black: #181818;
-	--lightGray: #c3bcbc;
 }
 
 body{
@@ -34,7 +33,7 @@ a{
 }
 
 a:hover{
-	color: #EA9CDA;
+	color: #F19EE1;
 	transition:all ease-in 0.1s;
 }
 
@@ -385,7 +384,7 @@ header{
 
 .about_content article{
 	padding:8px 0px 40px 0px;
-	border-top: .7px solid var(--lightGray);
+	border-top: .7px solid var(--white);
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
