@@ -97,7 +97,7 @@ sup{
 
 header{
 	position: fixed;
-	z-index:1;
+	z-index:3;
 	top:9px;
 	left:8px;
 }
@@ -145,6 +145,7 @@ header{
 	overflow:hidden;
 	position:sticky;
 	top:0;
+	z-index:1;
 }
 
 .home_article{
@@ -156,10 +157,12 @@ header{
 
 .slideshow_container{
 	aspect-ratio: 4 / 5;
+	height:auto;
+	overflow:hidden;
 }
 
 .home_article figure {
-    width:100%;   
+    width:100%;
 	height:100%;
 	margin:0;
 }
@@ -178,7 +181,7 @@ header{
 }
 
 .home_article figure[slider] .slider__img--active {
-	position: static;
+	position: auto;
 	width: 100%;
 	height: 100%; 
 }
@@ -228,10 +231,6 @@ header{
 	gap:16px;
 }
 
-/*.home_article figcaption, .home_article .slider__count{
-	font-size: 0.8rem;
-}*/
-
 .home_article .slider__count{
 	font-variant-numeric: tabular-nums;
 }
@@ -252,6 +251,15 @@ header{
 	max-width:420px;
 	overflow:scroll;
 	position:relative;
+}
+
+.with_caption_content::-webkit-scrollbar {
+    display: none;  /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+.with_caption_content {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .project_head {
@@ -345,6 +353,8 @@ header{
 	flex-direction: column;
 	justify-content: space-between;
 	gap:24px;
+	z-index: 2;
+	transform: translate3d(0,0,0);
 }
 
 .horizontal_image figure {
@@ -381,6 +391,7 @@ header{
 	background-color: var(--black);
 	position:relative;
 	min-height:100vh;
+	transform: translate3d(0,0,0);
 }
 
 .home_main .about_content{
@@ -428,11 +439,6 @@ header{
 	h2{
 		font-size: 1.15rem;
 	}
-
-	/*.home_article figcaption, .home_article .slider__count{
-		font-size: 0.7rem;
-		line-height:1.3em;
-	}*/
 }
 
 @media only screen and (max-width:1280px){
@@ -522,9 +528,10 @@ header{
 		width:100%;
 	}
 
-	.slideshow_container{
-		max-height:95vh;
-		max-height:95dvh;
+	.slideshow_container, .slideshow_container figure{
+		max-height:90vh;
+		max-height:90dvh;
+		min-height:100%;
 	}
 
 	.with_caption{
@@ -666,7 +673,7 @@ header{
 }
 
 
-@media screen and (min-device-aspect-ratio: 2){
+@media screen and (min-aspect-ratio: 2.5){
 
 	.home_project{
 		max-height:none;
@@ -684,7 +691,7 @@ header{
 
 }
 
-@media screen and (max-device-aspect-ratio: 1){
+@media screen and (max-aspect-ratio: 1){
 
 	.home_project{
 		min-height:50vh;
