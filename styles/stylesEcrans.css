@@ -148,6 +148,10 @@ header{
 	z-index:1;
 }
 
+.home_project h2{
+	font-family: "miller-display", serif;
+}
+
 .home_article{
 	width:50%;
 	position:relative;
