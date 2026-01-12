@@ -575,20 +575,16 @@ header{
 		top:0px;
 		left:0px;
 		width:100%;
-		background-color:var(--white);
+		background-color:var(--black);
 	}
 
 	.menu{
 		gap:8px;
-		margin-left:8px;
-		border-bottom:0.8px solid;
-		border-color: rgba(24, 24, 24, 0.7) ;
+		margin-right:0px;
 	}
 
 	.menu a{
-		padding:10px 0px 11px 0px;
-		background-color:var(--white);
-		color:var(--black);
+		padding:10px 8px 11px 8px;
 	}
 
 	.home_main{
@@ -601,6 +597,7 @@ header{
 
 	.with_caption h2{
 		padding-left:0;
+		padding-bottom:24px;
 	}
 
 	.project_info{
