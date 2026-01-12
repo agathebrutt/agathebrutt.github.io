@@ -113,7 +113,6 @@ header{
 
 .menu a{
 	padding:10px 16px 11px 16px;
-	/*border:0.7px solid var(--white);*/
 	text-decoration: none;
 	color: var(--white);
 	display:block;
@@ -131,7 +130,7 @@ header{
 
 .home_project{
 	width:100%;
-	max-height:97dvh;
+	max-height:100dvh;
 	min-height:85dvh;
 	display: flex;
 	flex-direction: row;
@@ -454,14 +453,6 @@ header{
 		width:65%;
 	}
 
-	.slider__captions {
-		top:auto;
-		right:auto;
-		bottom:10px;
-		left:16px;
-		flex-direction: row-reverse;
-	}
-
 	.with_caption{
 		width:35%;
 	}
@@ -500,18 +491,7 @@ header{
 }
 
 
-@media only screen and (max-width:1024px){
-
-	.prev, .next{
-		opacity:1;
-		font-size:2rem;
-		padding:10px;
-	}
-
-}	
-
-
-@media only screen and (max-width:820px){
+@media only screen and (max-width:860px){
 
 	.home_project{
 		max-height:none;
@@ -520,7 +500,7 @@ header{
 		justify-content: flex-start;
 		position:static;
 		gap:8px;
-		padding-bottom:80px;
+		padding-bottom:120px;
 	}
 
 	.home_article{
@@ -528,8 +508,19 @@ header{
 	}
 
 	.slideshow_container, .slideshow_container figure{
-		max-height:90dvh;
+		max-height:97dvh;
 		min-height:100%;
+	}
+
+	.prev, .next{
+		opacity:1;
+		font-size:2rem;
+		padding:8px;
+	}
+
+	.slider__captions {
+		top:10px;
+		right:12px;
 	}
 
 	.with_caption{
@@ -567,10 +558,6 @@ header{
 		display:none;
 	}
 
-	.home_main .about_content{
-		padding-top:240px;
-	}
-
 	.about_content article > * {
 		padding-right:20px;
 	}
@@ -582,6 +569,47 @@ header{
 
 	.slideshow_container{
 		max-height:none;
+	}
+
+	header{
+		top:0px;
+		left:0px;
+		width:100%;
+		background-color:var(--white);
+	}
+
+	.menu{
+		gap:8px;
+		margin-left:8px;
+		border-bottom:0.8px solid;
+		border-color: rgba(24, 24, 24, 0.7) ;
+	}
+
+	.menu a{
+		padding:10px 0px 11px 0px;
+		background-color:var(--white);
+		color:var(--black);
+	}
+
+	.home_main{
+		padding-top:40px;
+	}
+
+	.with_caption_content{
+		max-width:100%;
+	}
+
+	.with_caption h2{
+		padding-left:0;
+	}
+
+	.project_info{
+		border-top:0.8px solid;
+		border-color: rgba(24, 24, 24, 0.7) ;
+	}
+
+	.project_captions > p{
+		min-height:auto;
 	}
 
 }
