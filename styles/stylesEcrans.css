@@ -97,8 +97,8 @@ sup{
 header{
 	position: fixed;
 	z-index:4;
-	top:8px;
-	left:7px;
+	top:9px;
+	left:8px;
 }
 
 .menu{
@@ -106,17 +106,18 @@ header{
 	flex-direction: row;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	gap:8px;
+	gap:1px;
 	margin-right:8px;
 	max-width:100%;
 }
 
 .menu a{
 	padding:10px 16px 11px 16px;
-	border:0.7px solid var(--white);
+	/*border:0.7px solid var(--white);*/
 	text-decoration: none;
 	color: var(--white);
 	display:block;
+	background-color:var(--black);
 }
 
 .menu a:hover{
@@ -130,7 +131,7 @@ header{
 
 .home_project{
 	width:100%;
-	max-height:100dvh;
+	max-height:97dvh;
 	min-height:85dvh;
 	display: flex;
 	flex-direction: row;
