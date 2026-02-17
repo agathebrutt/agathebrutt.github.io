@@ -508,9 +508,8 @@ header{
 		width:100%;
 	}
 
-	.slideshow_container, .slideshow_container figure{
-		max-height:97dvh;
-		min-height:100%;
+	.slideshow_container{
+		max-height:none;
 	}
 
 	.prev, .next{
@@ -613,7 +612,7 @@ header{
 }
 
 
-@media screen and (min-aspect-ratio: 2.5){
+@media only screen and (min-aspect-ratio: 2){
 
 	.home_project{
 		max-height:none;
@@ -627,18 +626,6 @@ header{
 
 	.horizontal_image figure {
 		max-height:140dvh;
-	}
-
-}
-
-@media screen and (max-aspect-ratio: 1){
-
-	.home_project{
-		min-height:50dvh;
-	}	
-
-	.horizontal_image figure {
-		min-height:65dvh;
 	}
 
 }
