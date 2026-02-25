@@ -192,6 +192,8 @@ header{
 }
 
 .prev, .next {
+	font-family: "freight-big-pro", serif;
+	font-feature-settings: "ornm";
 	cursor: pointer;
 	position: absolute;
 	top: 0;
@@ -326,6 +328,11 @@ header{
 
 .more:hover{
 	gap:20px;
+}
+
+.button_arrow {
+	font-family: "freight-big-pro", serif;
+	font-feature-settings: "ornm";
 }
 
 
