@@ -439,9 +439,13 @@ header{
 		font-size: 0.93rem;
 		line-height:1.35em;
 	}
+
+	.with_caption_content{
+		max-width:300px;
+	}
 }
 
-@media only screen and (max-width:1280px){
+@media only screen and (max-width:1080px){
 
 	header{
 		width:100%;
@@ -466,7 +470,7 @@ header{
 	}
 
 	.slideshow_container{
-		aspect-ratio:1;
+		aspect-ratio:9 / 10;
 		max-height:none;
 	}
 
@@ -489,14 +493,14 @@ header{
 		width:50%;
 		text-align: left; 
 		padding-right:20px;
-		padding-top:5px;
+		padding-top:8px;
 		border-top:0.8px solid;
 		border-color: rgba(24, 24, 24, 0.7) ;
 	}
 
 	.project_description{
 		width:50%;
-		padding-top:5px;
+		padding-top:8px;
 		border-top:0.8px solid;
 		border-color: rgba(24, 24, 24, 0.7) ;
 	}
@@ -522,16 +526,15 @@ header{
 	}
 }
 
-
-@media only screen and (max-width:640px) {
+@media only screen and (max-width:740px) {
 
 	.slideshow_container{
 		aspect-ratio: 4 / 5;
 	}
+}
 
-	.with_caption{
-		padding: 12px 0 80px 0;
-	}
+
+@media only screen and (max-width:640px) {
 
 	.with_caption_content{
 		flex-direction:column;
