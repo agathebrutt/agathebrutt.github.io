@@ -41,14 +41,7 @@ a:hover{
 
 /*------------ NIVEAUX DE LECTURE TRANSVERSAUX ------------*/
 
-h1{
-	margin: 0;
-	font-size: 1rem;
-	font-weight: 400;
-	line-height: 1.3em;
-}
-
-h2, button{
+h1, h2{
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.3em;
@@ -68,23 +61,15 @@ h3{
 	line-height: 1.2em;
 }
 
-p, h2, h3, button{
+h1, h2, h3, p, button{
 	margin: 0;
 	padding:0;
 	height: auto;
-	text-align:left;
 }
 
 .with_caption h2, .horizontal_image h2{
 	text-transform: uppercase;
 	letter-spacing: 0.1rem;
-}
-
-button{
-	background:none;
-	border:none;
-	font: inherit;
-	color:var(--black);
 }
 
 .italic{
@@ -114,13 +99,9 @@ header{
 	z-index:2;
 	top:0;
 	left:0;
-	width:40%;
+	width:50%;
 	padding:0 12px;
 	background-color: var(--white);
-}
-
-header nav{
-	height:100%;
 }
 
 .menu{
@@ -179,7 +160,7 @@ header nav{
 	aspect-ratio: 4 / 5;
 	height:auto;
 	overflow:hidden;
-	width:60%;
+	width:50%;
 }
 
 .home_article figure {
@@ -220,6 +201,8 @@ header nav{
 	font-family: "freight-big-pro", serif;
 	font-feature-settings: "ornm";
 	cursor: pointer;
+	background:none;
+	border:none;
 	position: absolute;
 	top: 0;
 	height:100%;
@@ -270,12 +253,15 @@ header nav{
 	justify-content: center;
 	align-items:center;
 	padding:56px 12px;
-	width:40%;
+	width:50%;
 }
 
 .with_caption_content{
 	max-width:380px;
 	overflow:scroll;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 }
 
 .with_caption_content::-webkit-scrollbar {
@@ -313,10 +299,6 @@ header nav{
 	text-align: center; 
 }
 
-.end_symbol_english{
-	opacity:.6;
-}
-
 .project_info{
 	width:100%;
 }
@@ -336,30 +318,6 @@ header nav{
 .project_info p{
 	text-align: right; 
 }
-
-/*
-.more{
-	width:100%;
-	display:flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	gap:10px;
-	padding-top:8px;
-	cursor: pointer;
-	white-space: nowrap;
-	border-top:0.8px solid;
-	border-color: rgba(24, 24, 24, 0.7) ;
-	transition: all ease-in-out 0.2s;
-}
-
-.more:hover{
-	gap:20px;
-}
-
-.button_arrow {
-	font-family: "freight-big-pro", serif;
-	font-feature-settings: "ornm";
-}*/
 
 
 /*----- big image -----*/
@@ -461,79 +419,46 @@ header nav{
 
 /*------------ RESPONSIVE ------------*/
 
+
+@media only screen and (max-width:1780px){
+	header{
+		width:38%;
+	}
+
+	.slideshow_container{
+		width:62%;
+	}
+
+	.with_caption{
+		width:38%;
+	}
+}
+
 @media only screen and (max-width:1440px){
-	p, a, button, h1, ul, h2, .slider__captions {
-		font-size:0.82rem;
+	h1, h2, p, a, button, .slider__captions{
+		font-size: 0.93rem;
 		line-height:1.35em;
 	}
-
-	.with_caption_content{
-		width:100%;
-		max-width:460px;
-		overflow:scroll;
-		position:relative;
-	}
-
-	.project_captions > p{
-		min-height:159px;
-	}
-
 }
 
 @media only screen and (max-width:1280px){
 
-	.slideshow_container{
-		width:65%;
-	}
-
-	.with_caption{
-		width:35%;
-	}
-
-	.with_caption_content{
-		max-width:273px;
-	}
-
-	.with_caption h2{
-		padding-left:0;
-	}
-
-	.project_description{
-		flex-direction: column;
-	}
-
-	.project_info{
-		width:100%;
-		flex-direction: row;
-		border-top:0.8px solid;
-		border-color: rgba(24, 24, 24, 0.7) ;
-	}
-
-	.project_captions{
+	header{
 		width:100%;
 	}
 
-	.about_content h2 {
-		width:35%;
+	.home_main{
+		padding-top:38px;
+		background-color:var(--white);
 	}
-
-	.about_content p, .about_content ul {
-		width:65%
-	}
-
-}
-
-
-@media only screen and (max-width:860px){
 
 	.home_project{
 		max-height:none;
 		min-height:none;
-		flex-direction: column;
+		flex-direction: column-reverse;
 		justify-content: flex-start;
 		position:static;
-		gap:8px;
-		padding-bottom:120px;
+		padding:12px;
 	}
 
 	.home_article{
@@ -541,104 +466,113 @@ header nav{
 	}
 
 	.slideshow_container{
+		aspect-ratio:1;
 		max-height:none;
 	}
 
 	.prev, .next{
 		opacity:1;
-		font-size:2rem;
-		padding:8px;
-	}
-
-	.slider__captions {
-		top:10px;
-		right:12px;
 	}
 
 	.with_caption{
-		margin:0;
+		padding: 12px 0 96px 0;
 	}
 
 	.with_caption_content{
-		max-width:460px;
+		width:100%;
+		max-width: none;
+		flex-direction:row;
+		gap:12px;
 	}
 
-	.with_caption h2{
-		padding-left:35%;
+	.with_caption_content h2{
+		width:50%;
+		text-align: left; 
+		padding-right:20px;
+		padding-top:5px;
+		border-top:0.8px solid;
+		border-color: rgba(24, 24, 24, 0.7) ;
 	}
 
 	.project_description{
-		flex-direction: row;
-		justify-content: space-between;
-	}
-
-	.project_info{
-		width:calc(35% - 8px);
-		border:none;
-		flex-direction: column;
+		width:50%;
+		padding-top:5px;
+		border-top:0.8px solid;
+		border-color: rgba(24, 24, 24, 0.7) ;
 	}
 
 	.project_captions{
-		width:65%;
+		padding-right:20px;
 	}
 
-	.project_captions > p{
-		min-height:159px;
+	.project_captions p, .project_info p{
+		text-align: left; 
+	}
+
+	.project_info li{
+		justify-content: flex-start;
+	}
+
+	.project_info h3{
+		min-width:100px;
 	}
 
 	.horizontal_image {
 		display:none;
 	}
-
-	.about_content article > * {
-		padding-right:20px;
-	}
-
 }
 
 
 @media only screen and (max-width:640px) {
 
 	.slideshow_container{
-		max-height:none;
+		aspect-ratio: 4 / 5;
 	}
 
-	header{
-		top:0px;
-		left:0px;
-		width:100%;
-		background-color:var(--black);
-	}
-
-	.menu{
-		gap:8px;
-		margin-right:0px;
-	}
-
-	.menu a{
-		padding:10px 8px 11px 8px;
-	}
-
-	.home_main{
-		padding-top:38px;
+	.with_caption{
+		padding: 12px 0 80px 0;
 	}
 
 	.with_caption_content{
-		max-width:100%;
+		flex-direction:column;
+		gap:0;
 	}
 
-	.with_caption h2{
-		padding-left:0;
-		padding-bottom:24px;
+	.with_caption_content h2{
+		width:100%;
+		text-align: center; 
+		padding-right:0;
 	}
 
-	.project_info{
-		border-top:0.8px solid;
-		border-color: rgba(24, 24, 24, 0.7) ;
+	.project_description{
+		width:100%;
+		align-items: center;
+		padding-top:0;
+		border:none;
 	}
 
-	.project_captions > p{
-		min-height:auto;
+	.project_captions{
+		padding-right:16px;
+		padding-left:16px;
+		padding-top:0;
+		border-top:none;
+		max-width:500px;
+	}
+
+	.project_captions p{
+		text-align: center; 
+	}
+
+	.project_info p{
+		text-align: right; 
+	}
+
+	.project_info li{
+		justify-content: space-between;
+	}
+
+	.project_info h3{
+		min-width:none;
 	}
 
 }
@@ -654,7 +588,8 @@ header nav{
 
 	.slideshow_container{
 		max-height:none;
-	}	
+		aspect-ratio:1;
+		}	
 
 	.horizontal_image figure {
 		max-height:140dvh;
