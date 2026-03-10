@@ -52,11 +52,11 @@ h2 {
   line-height: 1.3em;
 }
 
-h3 {
+h3, .accordion-btn {
   font-size: 0.87rem;
   font-weight: 400;
   font-style: italic;
-  letter-spacing: 0.02rem;
+  letter-spacing: 0.01rem;
   line-height: 1.3em;
 }
 
@@ -118,7 +118,7 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 12px;
-  padding: 9px 0;
+  padding: 9px 0 8px 0;
   border-bottom: 0.8px solid;
   border-color: rgba(24, 24, 24, 0.7);
 }
@@ -243,7 +243,7 @@ header {
   top: 0;
   left: 0;
   margin: 0 12px;
-  padding: 9px 0;
+  padding: 9px 0 8px 0;
   width: calc(100% - 24px);
   display: flex;
   flex-direction: row;
@@ -288,6 +288,10 @@ header {
 .with_caption h2 {
   padding-bottom: 12px;
   text-align: center;
+}
+
+.accordion-btn{
+  display:none;
 }
 
 .project_description {
@@ -335,6 +339,22 @@ header {
 .project_info p {
   text-align: right;
 }
+
+.accordion-btn {
+  background:none;
+  border:none;
+  font-family: "kings-caslon", serif;
+  cursor: pointer;
+  padding:8px 0 8px 0;
+  order: 3;
+  text-decoration: underline;
+}
+
+.mobile_tags{
+  display:none;
+  text-align: center;
+}
+
 
 /*----- big image -----*/
 
@@ -403,7 +423,7 @@ header {
 }
 
 .about_content article {
-  padding: 9px 0px 48px 0px;
+  padding: 8px 0px 48px 0px;
   border-top: 0.8px solid;
   border-color: rgba(252, 252, 252, 0.8);
   display: flex;
@@ -412,8 +432,8 @@ header {
 }
 
 .about_content h2 {
-  padding-right: 24px;
   width: 38%;
+  padding-right: 24px;
   font-variant-numeric: oldstyle-nums;
 }
 
@@ -471,13 +491,13 @@ header {
   }
 
   .home_main {
-    padding-top: 38px;
+    padding-top: 37.6px;
     background-color: var(--white);
   }
 
   .home_project {
-    max-height: none;
-    min-height: none;
+    max-height: unset;
+    min-height: unset;
     flex-direction: column-reverse;
     justify-content: flex-start;
     position: static;
@@ -498,7 +518,7 @@ header {
   }
 
   .with_caption {
-    padding: 12px 0 96px 0;
+    padding: 12px 0 64px 0;
   }
 
   .with_caption_content {
@@ -526,7 +546,7 @@ header {
 
   .project_captions {
     padding-right: 20px;
-    padding-bottom: 9px;
+    padding-bottom: 8px;
   }
 
   .project_captions p,
@@ -568,6 +588,14 @@ header {
 }
 
 @media only screen and (max-width: 740px) {
+  header {
+    padding: 0 8px;
+  }
+
+  .home_project {
+    padding: 8px;
+  }
+
   .slideshow_container {
     aspect-ratio: 4 / 5;
   }
@@ -584,19 +612,9 @@ header {
     padding: 7px 0;
     width: calc(100% - 16px);
   }
-}
-
-@media only screen and (max-width: 640px) {
-  header {
-    padding: 0 8px;
-  }
-
-  .home_project {
-    padding: 8px;
-  }
 
   .with_caption {
-    padding: 8px 0 80px 0;
+    padding: 8px 0 48px 0;
   }
 
   .with_caption_content {
@@ -608,18 +626,20 @@ header {
     width: 100%;
     text-align: center;
     padding-right: 0;
-    padding-bottom: 7px;
+    padding-bottom: 3px;
   }
 
   .project_description {
     width: 100%;
     align-items: center;
+    order: 2;
+    border-top:none;
   }
 
   .project_captions {
     padding-right: 16px;
     padding-left: 16px;
-    max-width: 500px;
+    padding-top:12px;
   }
 
   .project_captions p {
@@ -642,27 +662,45 @@ header {
     padding: 8px;
   }
 
-  .about_content article {
-    gap: 0px;
+  .about_content h2 {
+    width: 100px;
+    padding-right: 8px;
+  }
+  .about_content article > *:not(:first-child) {
+    flex-grow:1;
+    padding-right: 0px;
+    max-width:350px;
   }
 
   .accordion-btn {
+    display:block;
+    
     + div {
-      height: 0;
-      transition: height 0.5s ease-out;
+      max-height: 0;
+      transition: max-height 0.5s ease-out;
       overflow:hidden;
 
       &.deployed {
-        height: 500px;
+        max-height: 550px;
       }
     }
+  }
+
+  .mobile_tags{
+    display:block;
+  }
+}
+
+@media only screen and (max-width: 385px) {
+  header span{
+    display:none;
   }
 }
 
 @media only screen and (min-aspect-ratio: 2) {
   .home_project {
-    max-height: none;
-    min-height: none;
+    max-height: unset;
+    min-height: unset;
     position: static;
   }
 
