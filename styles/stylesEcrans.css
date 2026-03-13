@@ -52,7 +52,8 @@ h2 {
   line-height: 1.3em;
 }
 
-h3, .accordion-btn {
+h3,
+.accordion-btn {
   font-size: 0.87rem;
   font-weight: 400;
   font-style: italic;
@@ -90,7 +91,7 @@ button {
 }
 
 .english {
-  color:var(--gray);
+  color: var(--gray);
 }
 
 sup {
@@ -263,14 +264,14 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  padding: 100px 12px;
+  align-items: flex-start;
+  padding: 125px 12px;
   width: 38%;
   position: relative;
 }
 
 .with_caption_content {
-  width:100%;
+  width: 100%;
   max-width: 365px;
   overflow: scroll;
   display: flex;
@@ -292,15 +293,15 @@ header {
   text-align: center;
 }
 
-.accordion-btn{
-  display:none;
+.accordion-btn {
+  display: none;
 }
 
 .project_description {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items:center;
+  align-items: center;
   width: 100%;
 }
 
@@ -344,64 +345,63 @@ header {
 }
 
 .accordion-btn {
-  background:none;
-  border:none;
+  background: none;
+  border: none;
   font-family: "kings-caslon", serif;
   cursor: pointer;
-  padding:8px 0 8px 0;
+  padding: 8px 0 8px 0;
   order: 3;
   text-decoration: underline;
 }
 
-.mobile_tags{
-  display:none;
+.mobile_tags {
+  display: none;
   text-align: center;
 }
-
 
 /*----- big image -----*/
 
 .horizontal_image {
-	width:100%;
-	height:auto;
-	position:relative;
-	padding:12px;
-	background-color: var(--black);
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 12px;
+  background-color: var(--black);
   display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	gap:12px;
-	z-index:2;
-	transform: translate3d(0,0,0);
-  color:var(--white);
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  z-index: 2;
+  transform: translate3d(0, 0, 0);
+  color: var(--white);
 }
 
 .horizontal_image figure {
-  width:100%;
-	height:auto;
-	margin:0;
-	aspect-ratio: 4 / 3;
-	min-height:100dvh;
-	max-height:110dvh;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  min-height: 100dvh;
+  max-height: 110dvh;
 }
 
-.horizontal_image img, .horizontal_image video {
-	width: 100%;
-	height: 100%; 
-	object-fit: cover;
+.horizontal_image img,
+.horizontal_image video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .horizontal_image .project_title {
-	width:100%;
-	padding-bottom:8px;
-	gap:24px;
-	display:flex;
-	flex-direction: row;
-	justify-content: space-between;
-	border-bottom:0.8px solid;
-	border-color: rgba(252, 252, 252, 0.7) ;
+  width: 100%;
+  padding-bottom: 8px;
+  gap: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 0.8px solid;
+  border-color: rgba(252, 252, 252, 0.7);
 }
-
 
 /*------------ A PROPOS ------------*/
 
@@ -429,7 +429,7 @@ header {
 .about_content h2 {
   width: 38%;
   padding-right: 24px;
-  font-style:italic;
+  font-style: italic;
   letter-spacing: 0.01rem;
 }
 
@@ -450,7 +450,6 @@ header {
 /*------------ RESPONSIVE ------------*/
 
 @media only screen and (max-width: 1520px) {
-
   h1,
   h2,
   p,
@@ -462,13 +461,24 @@ header {
     line-height: 1.35em;
   }
 
-  .with_caption{
-    padding-top:100px;
+  header,
+  .about_content h2 {
+    width: 35%;
+  }
+
+  .slideshow_container,
+  .about_content article > *:not(:first-child) {
+    width: 65%;
+  }
+
+  .with_caption {
+    width: 35%;
+    padding-top: 100px;
   }
 
   .with_caption_content {
     max-width: 415px;
-    padding:0 40px;
+    padding: 0 40px;
   }
 }
 
@@ -486,7 +496,7 @@ header {
   }
 
   .home_project {
-    height:auto;
+    height: auto;
     flex-direction: column-reverse;
     justify-content: flex-start;
     position: static;
@@ -498,8 +508,8 @@ header {
   }
 
   .slideshow_container figure {
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
   }
 
@@ -517,16 +527,17 @@ header {
     aspect-ratio: 1;
   }
 
-  .prev, .next{
-    padding:8px 8px 37px 8px;
+  .prev,
+  .next {
+    padding: 8px 8px 37px 8px;
   }
 
-  .slider__captions{
-    position:static;
-    margin:0;
-    width:100%;
-    border:none;
-    color:var(--black);
+  .slider__captions {
+    position: static;
+    margin: 0;
+    width: 100%;
+    border: none;
+    color: var(--black);
   }
 
   .with_caption {
@@ -535,7 +546,7 @@ header {
 
   .with_caption_content {
     max-width: none;
-    padding:0;
+    padding: 0;
   }
 
   .with_caption_content h2 {
@@ -548,17 +559,17 @@ header {
   }
 
   .project_captions {
-    padding:12px 16px 8px 16px;
-    max-width:600px;
+    padding: 12px 16px 8px 16px;
+    max-width: 600px;
   }
 
   .accordion-btn {
-    display:block;
-    
+    display: block;
+
     + div {
       max-height: 0;
       transition: max-height 0.5s ease-out;
-      overflow:hidden;
+      overflow: hidden;
 
       &.deployed {
         max-height: 550px;
@@ -566,21 +577,21 @@ header {
     }
   }
 
-  .mobile_tags{
-    display:block;
+  .mobile_tags {
+    display: block;
   }
 
   .horizontal_image {
-		display:none;
-	}
+    display: none;
+  }
 
-  .about_content h2, .about_content article > *:not(:first-child) {
-    width:50%;
+  .about_content h2,
+  .about_content article > *:not(:first-child) {
+    width: 50%;
   }
 }
 
 @media only screen and (max-width: 1024px) {
-
   .home_article figure img,
   .home_article figure video {
     aspect-ratio: 9 / 10;
@@ -599,11 +610,9 @@ header {
   .next {
     opacity: 1;
   }
-
 }
 
 @media only screen and (max-width: 860px) {
-
   header {
     padding: 0 8px;
   }
@@ -661,19 +670,18 @@ header {
     width: 100px;
     padding-right: 8px;
   }
-  
-  .about_content article > *:not(:first-child) {
-    flex-grow:1;
-    padding-right: 16px;
-    max-width:350px;
-    min-width:50%;
-  }
 
+  .about_content article > *:not(:first-child) {
+    flex-grow: 1;
+    padding-right: 16px;
+    max-width: 350px;
+    min-width: 50%;
+  }
 }
 
 @media only screen and (max-width: 385px) {
-  header span{
-    display:none;
+  header span {
+    display: none;
   }
   .prev,
   .next {
@@ -683,7 +691,7 @@ header {
 
 @media only screen and (min-aspect-ratio: 2) {
   .home_project {
-    height:auto;
+    height: auto;
     position: static;
   }
 
