@@ -562,6 +562,7 @@ header {
   .prev,
   .next {
     opacity: 1;
+    touch-action: manipulation;
   }
 }
 
