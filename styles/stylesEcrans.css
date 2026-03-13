@@ -545,6 +545,11 @@ header {
 }
 
 @media only screen and (max-width: 1024px) {
+  
+  .slideshow_container{
+    touch-action: manipulation;
+  }
+  
   .home_article figure img,
   .home_article figure video {
     aspect-ratio: 9 / 10;
@@ -562,7 +567,6 @@ header {
   .prev,
   .next {
     opacity: 1;
-    touch-action: manipulation;
   }
 }
 
