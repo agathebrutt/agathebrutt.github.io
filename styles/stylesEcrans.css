@@ -659,7 +659,8 @@ header {
     position: static;
   }
 
-  .slideshow_container {
+  .home_article figure img,
+  .home_article figure video {
     aspect-ratio: 1;
   }
 
