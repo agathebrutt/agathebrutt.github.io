@@ -414,7 +414,7 @@
         <article class="home_article with_caption">
           <div class="with_caption_content">
             <h2>TerraViva</h2>
-            <p class="project_tags">Lettrage, identité visuelle</p>
+            <p class="project_tags">Lettrage et identité visuelle</p>
             <button type="button" class="accordion-btn">Lire plus</button>
 
             <div class="project_description">
@@ -675,18 +675,10 @@
             />
             <img
               slider__img
-              class="fullscreen from_left"
+              class="horizontal"
               src="images/agathe_brutt_RATPLUX_c_StephaneDUSSAUBY_9.jpg"
               alt="Fresques pour le partenariat Réseau LUX x RATP : David LaChapelle présenté par Portrait(s)."
               caption="David LaChapelle présenté par Portrait(s) © RATP&nbsp;–&nbsp;Stéphane Dussauby"
-              loading="lazy"
-            />
-            <img
-              slider__img
-              class="horizontal"
-              src="images/agathe_brutt_RATPLUX_c_StephaneDUSSAUBY_5.jpg"
-              alt="Fresques pour le partenariat Réseau LUX x RATP : Vincent Munier présenté par le Festival photo La Gacilly."
-              caption="Vincent Munier présenté par le Festival photo La Gacilly © RATP&nbsp;–&nbsp;Stéphane Dussauby"
               loading="lazy"
             />
             <img
@@ -715,15 +707,16 @@
             />
             <img
               slider__img
-              src="images/agathe_brutt_RATPLUX_c_ReseauLUX_1.jpg"
-              alt="Fresques pour le partenariat Réseau LUX x RATP : David LaChapelle présenté par Portrait(s)."
-              caption="David LaChapelle présenté par Portrait(s) © Réseau LUX"
+              class="horizontal"
+              src="images/agathe_brutt_RATPLUX_c_StephaneDUSSAUBY_5.jpg"
+              alt="Fresques pour le partenariat Réseau LUX x RATP : Vincent Munier présenté par le Festival photo La Gacilly."
+              caption="Vincent Munier présenté par le Festival photo La Gacilly © RATP&nbsp;–&nbsp;Stéphane Dussauby"
               loading="lazy"
             />
             <img
               slider__img
               src="images/agathe_brutt_RATPLUX_c_StephaneDUSSAUBY_8.jpg"
-              alt="Cartel pour le partenariat Réseau LUX x RATP"
+              alt="Cartel des fresques du partenariat Réseau LUX x RATP."
               caption="© RATP&nbsp;–&nbsp;Stéphane Dussauby"
               loading="lazy"
             />
@@ -790,14 +783,14 @@
             <img
               slider__img
               class="slider__img--active"
-              src="images/agathe_brutt_mondeEpices_photoCouverture.jpg"
-              alt="Couverture du livre Un monde d’épices"
+              src="images/agathe_brutt_mondeEpices_photoFicheEpice.jpg"
+              alt="Fiche épice extraite du livre Un monde d’épices"
               loading="lazy"
             />
             <img
               slider__img
-              src="images/agathe_brutt_mondeEpices_photoFicheEpice.jpg"
-              alt="Fiche épice extraite du livre Un monde d’épices"
+              src="images/agathe_brutt_mondeEpices_photoCouverture.jpg"
+              alt="Couverture du livre Un monde d’épices"
               loading="lazy"
             />
             <img
@@ -954,7 +947,7 @@
           <div class="with_caption_content">
             <h2>Garona</h2>
             <p class="project_tags">
-              Lettrage, identité visuelle<br />Dans le cadre du studio Lune
+              Lettrage et identité visuelle<br />dans le cadre du studio Lune
               Bleue
             </p>
             <button type="button" class="accordion-btn">Lire plus</button>
@@ -1004,13 +997,13 @@
             />
             <img
               slider__img
-              class="fullscreen"
               src="images/agathe_brutt_garona_carteVisiteRound.jpg"
               alt="Carte de visite pour la fromagerie Garona"
               loading="lazy"
             />
             <img
               slider__img
+              class="horizontal"
               src="images/agathe_brutt_garona_devanture.jpg"
               alt="Système graphique pour la fromagerie Garona"
               loading="lazy"
@@ -1100,7 +1093,7 @@
           <figure slider>
             <img
               slider__img
-              class="slider__img--active horizontal"
+              class="slider__img--active"
               src="images/agathe_brutt_verbierFestival_rapportEdition2021_couverture_ouvert.jpg"
               alt="Couverture du rapport d'édition 2021 du Verbier Festival"
               loading="lazy"
@@ -1157,8 +1150,8 @@
         <article class="home_article with_caption">
           <div class="with_caption_content">
             <h2>
-              Michel Blazy,
-              <span class="italic">Collection&nbsp;de&nbsp;chaussures</span>
+              Michel Blazy/<br />
+              Collection de&nbsp;chaussures
             </h2>
             <p class="project_tags">
               Design éditorial<br />pour l’artiste Michel Blazy<br />avec Claire
@@ -1172,11 +1165,10 @@
                   Conception d’un objet éditorial unique pour accompagner
                   l’installation
                   <span class="italic">Collection de&nbsp;chaussures</span>
-                  de&nbsp;l’artiste Michel&nbsp;Blazy. Cet&nbsp;herbier
-                  a&nbsp;pour but de&nbsp;répertorier les&nbsp;différentes
-                  plantes comprises dans l’installation
-                  et&nbsp;de&nbsp;faciliter l’entretien de&nbsp;cette
-                  œuvre&nbsp;vivante.
+                  de&nbsp;Michel&nbsp;Blazy. Cet&nbsp;herbier a&nbsp;pour but
+                  de&nbsp;répertorier les&nbsp;différentes plantes comprises
+                  dans l’installation et&nbsp;de&nbsp;faciliter l’entretien
+                  de&nbsp;cette œuvre&nbsp;vivante.
                 </p>
               </div>
 
@@ -1450,26 +1442,25 @@
           });
         }
       </script>
+      <script>
+        const accordionBtns = Array.from(
+          document.querySelectorAll(".accordion-btn"),
+        );
+
+        const more = "Lire plus";
+        const less = "Lire moins";
+
+        for (let i = 0; i < accordionBtns.length; i++) {
+          accordionBtns[i].addEventListener("click", readMore);
+        }
+
+        function readMore(ev) {
+          ev.target.nextElementSibling.classList.toggle("deployed");
+          ev.target.textContent === more
+            ? (ev.target.textContent = less)
+            : (ev.target.textContent = more);
+        }
+      </script>
     </main>
   </body>
-
-  <script>
-    const accordionBtns = Array.from(
-      document.querySelectorAll(".accordion-btn"),
-    );
-
-    const more = "Lire plus";
-    const less = "Lire moins";
-
-    for (let i = 0; i < accordionBtns.length; i++) {
-      accordionBtns[i].addEventListener("click", readMore);
-    }
-
-    function readMore(ev) {
-      ev.target.nextElementSibling.classList.toggle("deployed");
-      ev.target.textContent === more
-        ? (ev.target.textContent = less)
-        : (ev.target.textContent = more);
-    }
-  </script>
 </html>
